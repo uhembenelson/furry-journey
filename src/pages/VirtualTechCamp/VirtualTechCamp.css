@@ -1,0 +1,215 @@
+.virtualTechCampBg{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/virtTechCampBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 85vh;
+}
+
+
+.smallContainerTech{
+    width:600px
+  }
+
+.virtualTechDivBg{
+        background-image:url("../../images/virtTechCampDiv.png");
+        background-size: cover;
+        background-position: center;
+       height: 500px;
+        width: 500px;
+        position: relative;
+        left: -55px;
+}
+
+.virtualTechCampBg{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/virtTechCampBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 78vh;
+}
+
+
+
+.counterVirtTech{
+    font-size: 40px;
+    color: #fff;
+    width: 140px !important;
+    
+}
+
+
+.kids_tech{
+    background-image:url("../../images/kids_tech.jpg");
+    background-size: cover;
+    background-position: center;
+   width: 750px;
+   height:600px
+    
+}
+
+.curvedBgVirtTech{
+    background-image:url("../../images/curve_laptop.png");
+    background-size: cover;
+    background-position: top;
+    height: 156vh;
+   
+  
+}
+
+.virtPadding{
+
+    margin-top:0px
+}
+
+
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    
+.curvedBgVirtTech{
+    background-image:url("../../images/curve_laptop.png");
+    background-size: cover;
+    background-position: top;
+    height: 186vh;
+   
+  
+}
+
+.virtualTechCampBg{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/virtTechCampBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 38vh;
+}
+
+
+
+
+.kids_tech{
+    background-image:url("../../images/kids_tech.jpg");
+    background-size: cover;
+    background-position: center;
+   width: 450px;
+   height:600px
+    
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+    
+    
+    /* Small tablet to big tablet: from 768px to 1023px */
+    @media only screen and (max-width: 1023px) {
+    
+    
+    
+.kids_tech {
+    background-image: url("../../images/kids_tech.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 381px;
+    height: 600px;
+    position: relative;
+    left: 10px;
+}
+
+
+.curvedBgVirtTech{
+    background-image:url("../../images/curve_laptop.png");
+    background-size: cover;
+    background-position: top;
+    height: 132vh;
+   
+  
+}
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+    
+    /* Small phones to small tablets: from 481px to 767px */
+    @media only screen and (max-width: 767px) {
+    
+        .virtualTechDivBg{
+            
+    background-position: center;
+    height: 100vh;
+    width: 323px;
+    position: relative;
+    left: 29px;
+    top: 50px;
+}
+
+
+        
+        
+
+
+
+.kids_tech {
+    background-image: url("../../images/kids_tech.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+    height: 600px;
+    position: relative;
+    left: 10px;
+}
+
+.iconVirt-responsive {
+    width: 40px;
+    position: relative;
+    left: -45px;
+}
+
+
+.curvedBgVirtTech{
+    background-image:url("../../images/curve_laptop.png");
+    background-size: cover;
+    background-position: top;
+    height: 268vh;
+   
+  
+}
+
+
+.positionLeft{
+    position: relative ;
+    left:-148px ;
+}
+
+
+
+
+
+
+
+    }
+
+
+

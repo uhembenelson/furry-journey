@@ -1,0 +1,123 @@
+.HeroBgTechLoc{
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/tech_camp_at_locationBG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 85vh;
+}
+
+.bgTechCampAtLocation{
+    background-image: url("../../images/bgcourses_techAtLocation.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+    padding-bottom: 80px;
+
+}
+
+.bgCoursesTech-location{
+
+    background-image: url("../../images/bgCourses.png");
+    background-size: cover;
+    background-position: center;
+    height: 185vh;
+}
+
+
+.introImg1Tech {
+    position: relative;
+    top: -68px;
+    left: -10px;
+    width: 92%;
+}
+
+
+.introImg2Tech {
+    max-height: 223px;
+    width: 100%;
+    padding-bottom: 40px;
+    position: relative;
+    top: -29px;
+    left: -19px;
+
+}
+
+
+.animationBg{
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+    
+    /* Small tablet to big tablet: from 768px to 1023px */
+    @media only screen and (max-width: 1023px) {
+
+
+
+    }
+
+
+
+
+
+
+
+
+    
+
+
+
+   /* Small phones to small tablets: from 481px to 767px */
+
+   @media only screen and (max-width: 767px) {
+
+.introImg2Tech {
+    max-height: 223px;
+    width: 58%;
+    padding-bottom: 40px;
+    position: relative;
+    top: -23px;
+    left: -19px;
+}
+
+
+.introImg1Tech {
+    position: relative;
+    top: -474px;
+    left: 125px;
+    width: 65%;
+}
+
+
+.negativeMobileTech {
+    position: relative;
+    top:- 260px !important;
+}
+
+
+   }

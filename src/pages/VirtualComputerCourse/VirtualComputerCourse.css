@@ -1,0 +1,243 @@
+
+
+.heroBgVirtual{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./../../images/virtual_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+}
+
+.blocksBg{
+    background-image: url("./../../images/bg_blocks_virtual.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    height: 140vh;
+}
+
+
+.bundleContainer{
+    height: auto;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+}
+
+.lessonHeaderBg{
+   background-color: #73d56e;
+   border-radius: 10px 10px 0 0;
+   padding: 15px 0 2px 0;
+   height: 60px;
+}
+
+.lessonHeaderBgBlue{
+    background-color: #2f6777;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 0 2px 0;
+    height: 60px;
+}
+
+.priceText{
+    font-size: 20px;
+    padding-top: 5px;
+
+}
+
+.strikeText{
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+.greenBgBrder{
+    background-color: #73d56e;
+    color: #fff;
+    width: 90px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.numberDiscDiv{
+    border-bottom: 2px solid #cacaca;
+   
+
+}
+
+
+.CTA_select_btn{
+    background-color: #2f6777;
+    width:90px;
+    border-radius: 30px;
+    color:#fff;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.leftNegMargin{
+    margin-left: -50px;
+   
+}
+
+
+.virtual_img_bg{
+    background-image: url("./../../images/virtual_img_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    padding-top: 20px;
+}
+
+.iconVirt{
+    width: 50px;
+}
+
+
+
+
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+
+     .virtual_img_bg{
+        background-image: url("./../../images/virtual_img_bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 44vh;
+        padding-top: 20px;
+    }
+
+
+    .iconVirt {
+        width: 50px;
+        position: relative;
+        left: -30px;
+    }
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    /* Small tablet to big tablet: from 768px to 1023px */
+    @media only screen and (max-width: 1023px) {
+    
+.heroBgVirtual{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./../../images/virtual_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 62vh;
+}
+
+.blocksBg{
+    background-image: url("./../../images/bg_blocks_virtual.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    height: 122vh;
+}
+
+.greenBgBrder{
+    background-color: #73d56e;
+    color: #fff;
+    width: 62px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.iconVirt {
+    width: 50px;
+    position: relative;
+    left: -51px;
+}
+
+
+.virtual_img_bg{
+    background-image: url("./../../images/virtual_img_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 71vh;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+    
+    
+    /* Small phones to small tablets: from 481px to 767px */
+    @media only screen and (max-width: 767px) {
+
+
+        .heroBgVirtual{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./../../images/virtual_bg_small.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 115vh;
+        }
+
+
+
+
+        .blocksBg{
+            background-color: #fff !important;
+            background-size: cover;
+            background-position: center;
+            
+            height: auto;
+            padding-bottom: 40px;
+        }
+
+        .leftNegMargin {
+            margin-left: 0;
+        }
+
+        .iconVirt{
+            width: 40px;
+            position: relative;
+            left: -4px;
+        }
+
+        .iconVertContainer{
+            position: relative;
+            left:-30px;
+        }
+        
+
+    }
