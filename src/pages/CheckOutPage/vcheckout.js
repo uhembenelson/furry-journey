@@ -15,7 +15,7 @@ import Api from "../../Api";
 import myicon from "../../images/online-learning.png"
 import deleteicon from "../../images/delete.png";
 
-export default function CheckOut(props) {
+export default function VcheckOut(props) {
     const [filterQuery, setFilterQuery] = useState({});
     const courseListStatus = useSelector(state => state.course.loadAllMathsCourse && state.course.loadAllMathsCourse)
     const dispatch = useDispatch();
@@ -50,7 +50,7 @@ export default function CheckOut(props) {
 console.log(index)
 data.splice(index,1);
 console.log(data);
-localStorage.setItem("allEntries", JSON.stringify(data));
+localStorage.setItem("allCourseEntries", JSON.stringify(data));
 window.location.reload(false);
 
    
@@ -59,7 +59,7 @@ window.location.reload(false);
     
 
     useEffect(() => {
-        const mydata = localStorage.getItem('allEntries')
+        const mydata = localStorage.getItem('allCourseEntries')
         console.log("this is my data ", mydata)
        
 

@@ -70,8 +70,8 @@ export const appConfig = {
 bhost: "https://api.cyberteckacademy.com",
 authhost: "https://api.cyberteckacademy.com",
  //host: "localhost:27019/course-api",
- host:"http://localhost:27019",
- //host:"https://cybat.herokuapp.com",
+ //host:"http://localhost:27019",
+ host:"https://cybat.herokuapp.com",
  shost: "https://api.cyberteckacademy.com",
 };
 

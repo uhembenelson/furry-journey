@@ -37,7 +37,9 @@ import mathsTutoring from './pages/MathsTutoring/mathsTutoring';
 import CodingCoursePage from './pages/CodingCoursePage';
 import GameDevCoursePage from './pages/GameDevCoursePage';
 import TCCoursePage from './pages/TCCoursePage/tcCoursePage';
-import CheckOut from './pages/CheckOutPage/checkout'
+import CheckOut from './pages/CheckOutPage/checkout';
+import VcheckOut from './pages/CheckOutPage/vcheckout';
+import Plan from './pages/PlanPage/Plan';
 
 
 
@@ -87,6 +89,8 @@ function App() {
             <Route exact path="/virtual-tech-camp" component={VirtualTechCamp} />
             <Route  exact path="/maths-tutoring" component={mathsTutoring} />
             <Route  exact path="/checkout" component={CheckOut} />
+            <Route  exact path="/vcheckout" component={VcheckOut} />
+            <Route  exact path="/plan" component={Plan} />
 
             <Route exact path="/" component={HomePage} />
           </Switch>

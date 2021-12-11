@@ -24,6 +24,7 @@ export default function VirtualComputerCourse(props) {
       const courseListStatus = useSelector(state => state.course.loadAllVirtualcourses)
       const dispatch = useDispatch();
     const [mounted, setMounted] = useState(false)
+    const [data, setData] = useState()
       useEffect(() => {
             if (!mounted) {
                 dispatch(loadAllVirtualcourses({
@@ -32,6 +33,47 @@ export default function VirtualComputerCourse(props) {
                 setMounted(true)
             }
         }, [])
+
+
+        const gotoplan = (item) => {
+           console.log("this is my item here", item)
+           const vcoursedata = {
+               title:item.title,
+               grade:item.grade,
+               Category:item.courseType,
+               price:0,
+               discount:0,
+               coursetype:item.courseType
+           }
+          
+
+           var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+           if(existingEntries == null) existingEntries = [];
+          
+           localStorage.setItem("checkout", JSON.stringify(vcoursedata));
+           // Save allCourseEntries back to local storage
+           existingEntries.push(vcoursedata);
+           localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+           console.log("this is my real data", existingEntries)
+           window.location.href = "/plan"
+
+
+        }
+
+        const removeitem = () => {
+                    alert("this is another one")
+        //     const index = data.findIndex(key => key.id === `${id}`);
+        // console.log(index)
+        // data.splice(index,1);
+        // console.log(data);
+        // localStorage.setItem("allCourseEntries", JSON.stringify(data));
+        // window.location.reload(false);
+        
+           
+           }
+
+
+
       return(
          <Layout >
                                     <First_pane />
@@ -40,9 +82,9 @@ export default function VirtualComputerCourse(props) {
 
                                     
                       <PageBlock>
-                <Grid item xs={12} md={8} style={{ margin: 'auto' }}>
+                <Grid item xs={12} className="uk-margin-top" md={8} style={{  }}>
                     <PrimaryText>
-                    <h1 className="header1 uk-text-center">Choose your <span className="greenText">Virtual 1-on-1 </span> Computer Courses</h1>
+                    <h1 className="header1 uk-text-center uk-margin-large-top">Choose your <span className="greenText">Virtual 1-on-1 </span> Computer Courses</h1>
                     </PrimaryText>
                 </Grid>
                 <Grid item xs={12}>
@@ -64,15 +106,22 @@ export default function VirtualComputerCourse(props) {
                                             .slice(0, 6)
                                             .map(item =>
                                                 <Grid item xs={12} sm={6} md={4}>
+
+                                                    <p onClick={()=> {
+                                                        gotoplan(item)
+                                                    }}>
                                                     <CourseBlock
-                                                        to={`/courses/${item.id}/${item.title.replaceAll(' ', '-')}`}
-                                                        label={item.title}
-                                                        grade={Data.Config.get(Data.Config.Grade, item.grade, 'displayName')}
-                                                        courseType={Data.Config.get(Data.Config.CourseType, item.courseType, 'displayName')}
-                                                        price={item.price}
-                                                        mrpPrice={item.mrpPrice}
-                                                        coverPic={item.thumbnil}
-                                                    />
+                                                         
+                                                         // to={`/courses/${item.id}/${item.title.replaceAll(' ', '-')}`}
+                                                         label={item.title}
+                                                         grade={Data.Config.get(Data.Config.Grade, item.grade, 'displayName')}
+                                                         courseType={Data.Config.get(Data.Config.CourseType, item.courseType, 'displayName')}
+                                                         price={item.price}
+                                                         mrpPrice={item.mrpPrice}
+                                                         coverPic={item.thumbnil}
+                                                     />
+                                                    </p>
+
                                                 </Grid>
                                             )
                                     }
@@ -91,7 +140,7 @@ export default function VirtualComputerCourse(props) {
 
 
 <div className="uk-margin-xlarge-top"><Teachers /></div>
-                                     <Fourth_Pane />
+                                     {/* <Fourth_Pane /> */}
 <div className="uk-margin-xlarge-top"><Testimonial /></div>
                                        <Fifth_pane />
                

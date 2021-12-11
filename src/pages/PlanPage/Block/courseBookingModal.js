@@ -67,6 +67,10 @@ export default (props) => {
     if(bookSchoolCourseStatus === 'REJECTED'){
       setLoading(false);
     }
+
+
+   
+
   }, [bookSchoolCourseStatus]);
 
   const getSteps = () => {
@@ -106,12 +110,10 @@ export default (props) => {
   const addToCart = () =>{
     setShowCart(true)
     const mydata = localStorage.getItem('data')
+
+
+
     const checkoutdata = {
-      title:props?.courseInfo.title,
-      grade:props?.courseInfo.grade,
-      duration:props?.courseInfo.duration,
-      price:props?.courseInfo.price,
-      courseId:props?.courseInfo.id,
       schoolId:props?.schoolId,
       parentEmail:studentDetails.parentEmail,
       firstName:studentDetails.firstName,
@@ -121,22 +123,23 @@ export default (props) => {
     }
 
 
-    // localStorage.setItem("data", JSON.stringify(checkoutdata))
-    // var allbookdata = [];
-    // allbookdata.push(checkoutdata);
-    // localStorage.setItem("allbookdata", JSON.stringify(allbookdata));
-    // const mycheckout = localStorage.getItem('allbookdata')
+    const existingEntries = JSON.parse(localStorage.getItem("allEntries"));
    
-    // console.log("this is my store data", )
-   
-      var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-    if(existingEntries == null) existingEntries = [];
-   
-    localStorage.setItem("checkout", JSON.stringify(checkoutdata));
-    // Save allEntries back to local storage
-    existingEntries.push(checkoutdata);
-    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-    console.log("this is my real data", existingEntries)
+    console.log("this is my real vcoure", existingEntries)
+    const getindexlength = [existingEntries].length - 1
+    console.log("this is the length", getindexlength)
+
+    existingEntries[getindexlength].price = 65
+    existingEntries[getindexlength].firstName = studentDetails.firstName
+    existingEntries[getindexlength].lastName = studentDetails.lastName
+    existingEntries[getindexlength].id = Math.random()
+
+
+    console.log("this it",existingEntries)
+
+
+
+
   }
 
 
@@ -190,9 +193,9 @@ export default (props) => {
       aria-labelledby="simple-dialog-title"
       open={props?.isOpen}
     >
-      <DialogTitle style={{ textAlign: "center" }}>
-        {props?.courseInfo?.title} - {`(${props?.courseInfo?.price} USD)`}
-      </DialogTitle>
+      {/* <DialogTitle style={{ textAlign: "center" }}>
+        {props?.title?.title} - {`(${props?.courseInfo?.price} USD)`}
+      </DialogTitle> */}
       <DialogContent>
         <Grid container justifyContent="center">
           <Grid item xs={12} style={{ marginBottom: 30 }}>

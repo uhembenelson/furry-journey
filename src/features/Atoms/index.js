@@ -190,11 +190,11 @@ export const PageBlock = (props) => (
 );
 
 export const CourseBlock = (props) => {
-  console.log("COURSE TYPE: ", props?.courseType);
+  console.log(" my COURSE TYPE: ", props?.courseType);
   return (<Card style={{ position: "relative" }}
     className="courseBlock" component={Link} to={props.to}>
     {
-      (props?.courseType === 'At School Location') ? null : <Paper className="priceBadge" elivation={5} >
+      (props?.courseType === 'Virtual One on One') ? null : <Paper className="priceBadge" elivation={5} >
         <BodyText
           style={{
             fontSize: 12,

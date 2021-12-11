@@ -12,13 +12,14 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 function HeaderBar(props) {
   const [trasparent, setTrasparent] = useState(true);
   const [numberOfItems, setNumberOfItems] = useState("")
+  
   window.addEventListener("scroll", (e) => {
     setTrasparent(window.scrollY === 0);
   });
 
-  useEffect(()=> {
-   const mydata = localStorage.getItem('data')
-   const ldata = JSON.parse([mydata])
+  // useEffect(()=> {
+  //  const mydata = localStorage.getItem('data')
+  //  const ldata = JSON.parse([mydata])
   //  const numberOfItems = [ldata].length
   //  setNumberOfItems(numberOfItems)
   // if(ldata == null ){
@@ -26,9 +27,9 @@ function HeaderBar(props) {
   // }else{
   //   setNumberOfItems(ldata.length)
   // }
-   console.log("this is my local data",ldata)
+  //  console.log("this is my local data",ldata)
 
-  }, [numberOfItems])
+  // }, [numberOfItems])
   
   const [openDrawer, setOpendrawer] = useState(false);
   
