@@ -312,12 +312,9 @@ console.log("my discount", sumdiscount, sum)
 
 
             <div class="uk-container" >
-           
-
                {
                    noresult === true?(
                       
-
 <div class=" uk-margin-top uk-height-medium  uk-flex uk-flex-center uk-flex-middle">
     <h2>No items in your cart</h2>
     </div>
@@ -327,12 +324,8 @@ console.log("my discount", sumdiscount, sum)
                     
                     <div className="uk-width-3-4">
                     <h6>Order Summary</h6>
-
-
-
                         {
                             data.map(item => (
-                                
                                 <div>
                                    
                                      <div class="uk-card uk-card-default uk-card-body uk-card-small uk-margin-small-top uk-margin-small-bottom  " style={{ borderRadius: 10 }}>
@@ -353,6 +346,7 @@ console.log("my discount", sumdiscount, sum)
 
                                         <div>
                                             <p>{item.duration}</p>
+                                            <p>{item.grade}</p>
                                         </div>
 
                                         <div>
@@ -369,8 +363,7 @@ console.log("my discount", sumdiscount, sum)
                                         discountlastname === item.lastName?(
                                             calculatediscount(item)
                                         
-                                                
-                                            
+                           
                                         ):(null)
                                     }
                                     

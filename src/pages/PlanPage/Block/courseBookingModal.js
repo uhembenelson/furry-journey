@@ -32,6 +32,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import {AsynCallLoading} from './../../../features/Atoms';
 import axios from "axios";
 import { Autocomplete } from "formik-material-ui-lab";
+import { SettingsOutlined } from "@material-ui/icons";
 
 export default (props) => {
   const profileData = useSelector((state) => state?.auth?.profileFetch?.data);
@@ -47,12 +48,17 @@ export default (props) => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [showCart, setShowCart ] = useState(false)
+  const [title, setTitle] = useState()
   useEffect(() => {
     dispatch(profileFetch(userInfo.userId));
   }, [mounted]);
 
   useEffect(() => {
     setStudentDetails(profileData);
+  
+
+
+
   }, [profileData]);
 
   useEffect(() => {
@@ -67,6 +73,7 @@ export default (props) => {
     if(bookSchoolCourseStatus === 'REJECTED'){
       setLoading(false);
     }
+  
 
 
    
@@ -123,19 +130,70 @@ export default (props) => {
     }
 
 
-    const existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    const newexistingEntries = JSON.parse(localStorage.getItem("allEntries"));
    
-    console.log("this is my real vcoure", existingEntries)
-    const getindexlength = [existingEntries].length - 1
+    console.log("this is my real vcoure", newexistingEntries)
+    const getindexlength = [newexistingEntries].length - 1
+    const gettitle = ([newexistingEntries]).title
+    const getgrade = [newexistingEntries].grade
     console.log("this is the length", getindexlength)
 
-    existingEntries[getindexlength].price = 65
-    existingEntries[getindexlength].firstName = studentDetails.firstName
-    existingEntries[getindexlength].lastName = studentDetails.lastName
-    existingEntries[getindexlength].id = Math.random()
+  //   const mm =() => {
+  //     newexistingEntries.map((item)=>{
+  //       console.log("this is my map item", item.title)
+  //       const you = item.title
+  //       setTitle(you)
+
+  //   } )
+  // }
+  //   mm()
+
+   const price = newexistingEntries[getindexlength].price = 65
+   const firstName = newexistingEntries[getindexlength].firstName = studentDetails.firstName
+   const lastName =  newexistingEntries[getindexlength].lastName = studentDetails.lastName
+  const id =  newexistingEntries[getindexlength].id = Math.random()
+ 
+  
+console.log(gettitle)
+  
 
 
-    console.log("this it",existingEntries)
+
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
+
+    const checkoutdatav ={
+      firstName,
+      lastName,
+      price,
+      id,
+      title: title
+     
+
+    }
+   
+   // localStorage.setItem("checkout", JSON.stringify(vcoursedata));
+    // Save allCourseEntries back to local storage
+
+
+
+
+    existingEntries.push(checkoutdatav);
+    localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+   const index = existingEntries.findIndex(key => key.price === 0);
+console.log(index)
+existingEntries.splice(index,1);
+
+localStorage.setItem("allEntries", JSON.stringify(existingEntries));
+
+//console.log(existingEntries);
+    
+
+    console.log("this is my real data", existingEntries)
+  //  // window.location.href = "/plan"
+
+
+ 
 
 
 

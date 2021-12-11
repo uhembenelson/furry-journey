@@ -43,7 +43,8 @@ export default function VirtualComputerCourse(props) {
                Category:item.courseType,
                price:0,
                discount:0,
-               coursetype:item.courseType
+               coursetype:item.courseType,
+               id:Math.random()
            }
           
 

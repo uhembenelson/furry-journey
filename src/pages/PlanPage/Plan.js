@@ -54,6 +54,15 @@ export default function PlanPage(props) {
   const dispatch = useDispatch();
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    const newexistingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    newexistingEntries.map((item)=>{
+             console.log("this is my map item", item.title)
+             const you = item.title
+             setTitle(you)
+            
+    
+        } )
+
     if (!mounted && schoolId) {
       dispatch(loadSchool(schoolId));
       dispatch(loadSchoolCourse(schoolId));
@@ -155,7 +164,7 @@ export default function PlanPage(props) {
 
                   <div className=" uk-flex uk-flex-center">
                         <div className="">
-                           
+                             
                             <h1 className="uk-text-center header1">Choose your lesson <span className="greenText">package</span></h1>
                         </div>
                   </div>
